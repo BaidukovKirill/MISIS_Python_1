@@ -86,6 +86,14 @@ def handle_text(message):
 
     elif message.text=='/surprize':
         bot.send_message(message.chat.id, emoji.emojize('Сюрприз! С твоего счёта спишется 100 eur :euro_banknote:'))
+    elif message.text =='/my_friends':
+        keyboard = types.InlineKeyboardMarkup()
+
+        key_calc = types.InlineKeyboardButton(text='Calculator', url = 'https://t.me/BKM_CalculatorBot')
+        keyboard.add(key_calc)
+        key_site = types.InlineKeyboardButton(text='Site Availability', url = 'https://t.me/BKM_SiteAvailabilityBot')
+        keyboard.add(key_site)
+        bot.send_message(message.from_user.id, 'Подпишись на моих друзей, пожауйста',reply_markup=keyboard)
     else:
         user_text = message.text
 
