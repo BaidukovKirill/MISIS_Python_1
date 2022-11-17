@@ -3,7 +3,7 @@ from telebot import types
 import urllib3
 
 http = urllib3.PoolManager()
-bot = telebot.TeleBot('API_KEY_IS_HERE')
+bot = telebot.TeleBot('API KEY IS HERE')
 
 @bot.message_handler(commands=["start"])
 def start(m, res=False):

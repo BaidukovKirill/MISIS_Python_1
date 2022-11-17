@@ -3,7 +3,7 @@ from telebot import types
 import emoji
 import re
 
-bot = telebot.TeleBot('API_KEY_IS_HERE')
+bot = telebot.TeleBot('API KEY IS HERE')
 
 def tokenize(some_text):
     basic_to_reaplace = ['.',',','?','!',';',':', '\n']
@@ -82,7 +82,7 @@ def start(m, res=False):
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
     if message.text=='/info':
-        bot.send_message(message.chat.id, emoji.emojize('Привет! На связи бот для просто анализа текста! :desktop_computer:\nВведите /surprize ля сюрприза\n Или просто введите текст для анализа'))
+        bot.send_message(message.chat.id, emoji.emojize('Привет! На связи бот для просто анализа текста! :desktop_computer:\nВведите текст для анализа'))
 
     elif message.text=='/surprize':
         bot.send_message(message.chat.id, emoji.emojize('Сюрприз! С твоего счёта спишется 100 eur :euro_banknote:'))
